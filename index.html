@@ -10,13 +10,14 @@
         function downloadVCF() {
             // Create a new Blob (file-like object) with the VCF content
             const vcfContent = `BEGIN:VCARD
-            VERSION:4.0
-            N:Shinde;Atharva
-            FN:Atharva Shinde
-            TEL;TYPE=CELL:919076281105
-            EMAIL:atharvaus008@gmail.com
-            BDAY:-11-28
-            END:VCARD`;
+VERSION:3.0
+N:Shinde;Atharva;;;
+FN;CHARSET=UTF-8:Atharva Shinde
+BDAY:2005-11-28
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:tanishka@callistoelements.com
+TEL;TYPE=CELL:919076281105
+REV:20080424T195243Z
+END:VCARD`;
 
             const blob = new Blob([vcfContent], { type: 'text/vcard' });
 
