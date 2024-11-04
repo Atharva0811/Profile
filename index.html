@@ -2,31 +2,41 @@
   <head>
     <title>Atharva Shinde</title>
       <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    
+        // JavaScript function to generate and download VCF file
+        function downloadVCF() {
+            // Create a new Blob (file-like object) with the VCF content
+            const vcfContent = `BEGIN:VCARD
+            VERSION:4.0
+            FN:Atharva Shinde
+            TEL;TYPE=mobile,voice:919076281105
+            EMAIL:atharvaus008@gmail.com
+            BDAY:--11-28
+            END:VCARD`;
+
+            const blob = new Blob([vcfContent], { type: 'text/vcard' });
+
+            // Create an object URL for the Blob
+            const url = window.URL.createObjectURL(blob);
+
+            // Create a temporary <a> element to trigger the download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'contact.vcf';
+            document.body.appendChild(a);
+            a.click();
+
+            // Clean up
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+
+        document.getElementById('save-btn').addEventListener('click', downloadVCF);
+    
+    </script>
   </head>
   <body>
-    <script>
-      var saveBtn = document.getElementById("save-btn");
-    saveBtn.addEventListener("click", function () {
-  // Get the contact information from the website
-     var contact = {
-    name: "Atharva Shinde",
-    phone: "+91 90762 81105",
-    email: "atharvaus008@gmail.com",
-    birthday: "--11-28"
-  };
-  // create a vcard file
-  var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nBIRTHDAY" + contact.birthday + "\nEND:VCARD";
-  var blob = new Blob([vcard], { type: "text/vcard" });
-  var url = URL.createObjectURL(blob);
-  
-  const newLink = document.createElement('a');
-  newLink.download = contact.name + ".vcf";
-  newLink.textContent = contact.name;
-  newLink.href = url;
-  
-  newLink.click();
-});
-    </script>
 <div class="h-[100vh] flex items-center bg-[url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=5647&h=3770&dpr=2')] bg-cover bg-top text-center">
   <div class="flex h-full w-full items-center justify-center bg-gray-900/40 px-20 py-40">
     <div class="-mt-6 mx-4 p-4 border rounded-2xl w-11/12 flex flex-col items-center bg-white shadow-xl shadow-purple-800">
