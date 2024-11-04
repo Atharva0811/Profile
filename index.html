@@ -33,7 +33,8 @@
             document.body.removeChild(a);
         }
 
-        document.getElementById('save-btn').addEventListener('click', downloadVCF);
+        var tem = document.getElementById('saveCon');
+        tem.addEventListener('click', downloadVCF);
     
     </script>
   </head>
@@ -71,7 +72,7 @@
           </div>
         </div>
       <div class="-mb-10">
-      <button id="save-btn" class="bg-blue-600 text-white text-lg px-4 py-3 rounded-full hover:scale-105">Save Contact</button>
+      <button id="saveCon" class="bg-blue-600 text-white text-lg px-4 py-3 rounded-full hover:scale-105">Save Contact</button>
       </div>
     </div>
   </div>
