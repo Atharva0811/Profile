@@ -4,15 +4,16 @@
       <script src="https://cdn.tailwindcss.com"></script>
     <script>
       var saveBtn = document.getElementById("save-btn");
-saveBtn.addEventListener("click", function () {
+    saveBtn.addEventListener("click", function () {
   // Get the contact information from the website
-  var contact = {
-    name: "John Smith",
-    phone: "555-555-5555",
-    email: "john@example.com"
+     var contact = {
+    name: "Atharva Shinde",
+    phone: "+91 90762 81105",
+    email: "atharvaus008@gmail.com",
+    birthday: "--11-28"
   };
   // create a vcard file
-  var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+  var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nBIRTHDAY" + contact.birthday + "\nEND:VCARD";
   var blob = new Blob([vcard], { type: "text/vcard" });
   var url = URL.createObjectURL(blob);
   
