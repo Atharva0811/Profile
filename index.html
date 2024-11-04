@@ -2,6 +2,8 @@
   <head>
     <title>Atharva Shinde</title>
       <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
     <script>
       var saveBtn = document.getElementById("save-btn");
     saveBtn.addEventListener("click", function () {
@@ -23,9 +25,8 @@
   newLink.href = url;
   
   newLink.click();
-});</script>
-  </head>
-  <body>
+});
+    </script>
 <div class="h-[100vh] flex items-center bg-[url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=5647&h=3770&dpr=2')] bg-cover bg-top text-center">
   <div class="flex h-full w-full items-center justify-center bg-gray-900/40 px-20 py-40">
     <div class="-mt-6 mx-4 p-4 border rounded-2xl w-11/12 flex flex-col items-center bg-white shadow-xl shadow-purple-800">
@@ -59,7 +60,7 @@
           </div>
         </div>
       <div class="-mb-10">
-      <button id="save-btn" class="bg-blue-600 text-white text-lg px-4 py-3 rounded-full mt">Save Contact</button>
+      <button id="save-btn" class="bg-blue-600 text-white text-lg px-4 py-3 rounded-full hover:scale-105">Save Contact</button>
       </div>
     </div>
   </div>
