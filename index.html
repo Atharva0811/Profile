@@ -34,9 +34,11 @@
             window.URL.revokeObjectURL(url);
             document.body.removeChild(a);
         }
-
+        window.onload=function(){
         var tem = document.getElementById('saveCon');
+      console.log(tem);
         tem.addEventListener('click', downloadVCF);
+        }
     
     </script>
 <div class="h-[100vh] flex items-center bg-[url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=5647&h=3770&dpr=2')] bg-cover bg-top text-center">
